@@ -1,0 +1,22 @@
+{
+    "name": "davispeixoto/force-dot-com-toolkit-for-php",
+    "description": "A wrapper for the Force.com Web Services SOAP API",
+    "keywords": ["salesforce", "crm", "force.com toolkit"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Davis Peixoto",
+            "email": "davis.peixoto@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ext-soap" : "*",
+        "lib-libxml" : "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Davispeixoto\\ForceDotComToolkitForPhp\\": "src/"
+        }
+    }
+}
