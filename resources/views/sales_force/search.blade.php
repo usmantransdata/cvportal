@@ -110,9 +110,6 @@
                                                    <th>Phone</th>
                                                      <th>Title</th>
                                                      <th>Department</th>
-                                                     <th>Validation</th>
-                                                     <th>Disposition</th>
-                                                     <th>Email Status</th>
                                                  </tr>
                                               </thead>
                                                 <tbody>
@@ -120,7 +117,7 @@
                                               <?php
                                               if(empty($response['records'])){
                                                   echo '<script type="text/javascript">                                                
-                                                window.location= "/sfcrm/index.php/salesForceTestConnection";
+                                                window.location= "/salesForceTestConnection";
                                               </script>';
                                                 }
                                               ?>
@@ -135,9 +132,6 @@
                                                 <td>{{$search_result['Phone']}}</td>
                                                 <td>{{$search_result['Title']}}</td>
                                                 <td>{{$search_result['Department']}}</td>
-                                                <td>{{$search_result['Validation__c']}}</td>
-                                                <td>{{$search_result['Disposition__c']}}</td>
-                                                <td>{{$search_result['Is_Email_Verifield__c']}}</td>
                                               </tr>
                                               @endforeach
                                               @endif
@@ -152,9 +146,6 @@
                                                    <th>Phone</th>
                                                      <th>Title</th>
                                                      <th>Department</th>
-                                                     <th>Validation</th>
-                                                     <th>Disposition</th>
-                                                     <th>Email Status</th>
                                                  </tr>
                                               </tfoot>
                                            </table>
@@ -234,7 +225,7 @@
                
                 url: '{{route("saveBatchData")}}',
                 type: 'POST',
-               data: {'Id': data[1],'FirstName': data[2], 'LastName': data[3],'Email': data[4],'Phone': data[5],'Title': data[6],'Department': data[7],'Validation__c': data[8],'Disposition__c': data[9],'Is_Email_Verifield__c': data[10]}, 
+               data: {'Id': data[1],'FirstName': data[2], 'LastName': data[3],'Email': data[4],'Phone': data[5],'Title': data[6],'Department': data[7]}, 
 
                 success:function(response) {
                  // alert(response);

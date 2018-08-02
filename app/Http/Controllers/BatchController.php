@@ -86,11 +86,12 @@ class BatchController extends Controller
         
         return redirect()->back()->with('success', $msg);   
 
-        }elseif (isset($request['test'])) {
+        }elseif (isset($request['sales_force'])) {
 
-           $redirect_uri = 'http://localhost:7080/sfcrm/index.php/callback';
-           
+           $redirect_uri = 'https://validator.transdata.biz/callback';
+         
             $url="https://login.salesforce.com/services/oauth2/authorize?response_type=code&client_id=".$request['consumerKey']."&redirect_uri=".$redirect_uri."";
+
             return redirect()->to($url);
         }       
     }
@@ -192,13 +193,13 @@ if (!isset($instance_url) || $instance_url == "") {
 
 }   
     
-        public function ssfd(){
+    public function ssfd(){
 
            $id = Auth::user()->client_id;
 
            $sales_force_data = SalesForceAuthenticate::where('user_id', $id)->first();
 
-             $query = "SELECT Id, FirstName, LastName, Email, Phone, Title, Department, Validation__c, Disposition__c, Is_Email_Verifield__c FROM Contact";
+             $query = "SELECT Id, FirstName, LastName, Email, Phone, Title, Department FROM Contact";
 
            $url = "". $sales_force_data['instance_url']."/services/data/v20.0/query?q=" . urlencode($query);
 
@@ -215,7 +216,6 @@ if (!isset($instance_url) || $instance_url == "") {
            $json_response = curl_exec($curl);
 
            curl_close($curl);
-
 
            $response = json_decode($json_response, true);
 
@@ -288,7 +288,7 @@ print_r($url);*/
         }
         else
         {
-            return view('sales_force.searchBefore');
+            return view('sales_force.searchbefore');
         }
        
     }
@@ -314,9 +314,6 @@ print_r($url);*/
                 'state' => '', 
                 'zip' => '', 
                 'country' => '', 
-                'validation' => $input['Validation__c'], 
-                'disposition' => $input['Disposition__c'], 
-                'is_email_verified' => $input['Is_Email_Verifield__c'],
 
             ]);
                return $content_batch;
@@ -336,10 +333,7 @@ print_r($url);*/
                     'city' => '', 
                     'state' => '', 
                     'zip' => '', 
-                    'country' => '', 
-                    'validation' => $input['Validation__c'], 
-                    'disposition' => $input['Disposition__c'], 
-                    'is_email_verified' => $input['Is_Email_Verifield__c'],
+                    'country' => '',
 
                 ));
 

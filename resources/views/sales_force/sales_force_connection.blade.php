@@ -109,7 +109,7 @@
 
                                                         ?>
                                                         @if(is_null($con))
-                                                        <input type="hidden" name="redirect_uri" value="http://localhost:7080/sfcrm/index.php/callback">
+                                                        <input type="hidden" name="redirect_uri" value="http://validator.transdata.biz/callback">
                                           <div class="col-xs-4 col-xs-offset-4">
                                                      <label class="block clearfix">ConsumerKey
                                                        <span class="block input-icon input-icon-right">
@@ -153,7 +153,7 @@
                                                       <div >
                                                        
 
-                                                       <button type="submit" name="test" class="btn btn-primary pull-right">
+                                                       <button type="submit" name="sales_force" class="btn btn-primary pull-right">
                                                         <span class="glyphicon glyphicon-play"></span>
                                                       Test Connection</button>
                                                      
@@ -200,7 +200,7 @@
 <p> Create the Connected App in Salesforce and get the consumer key and consumer secret key for REST API Oauth authentication.</p>
 <p>Log in to Salesforce, navigate to <b> Setup ➤ Create ➤Apps. </b>Under the Connected App  section, click New to create a new Connected App.</p>
 <p style="font-weight: bolder;"><mark>Most Important, Set up the Call back URL same as described. If the Call Back URL is not set same as required then it will not work properly.</mark></p>
-<p style="font-weight: bolder;"><mark>• (Note: 1. The CallbackUrl is http://localhost:7080/sfcrm/index.php/callback  in API Enable Oauth Settings. 2. Note down the Consumer Key and Consumer Secret Key (click to reveal))</mark></p>
+<p style="font-weight: bolder;"><mark>• (Note: 1. The CallbackUrl is https://validator.transdata.biz/callback  in API Enable Oauth Settings. 2. Note down the Consumer Key and Consumer Secret Key (click to reveal))</mark></p>
   </p>
  <p style="text-align: center;"> <img src="{{asset('/')}}public/dist/images/info.png" class="center"></p>
       </div>
@@ -246,9 +246,9 @@
                 data: {
                     'grant_type' : 'authorization_code',
                     'code': 'aPrxshT49BthlzLK5vzTfhnM8XvfcGbenCd1uVRfJlDZ3pogKKLDd4mdWjMwr3OfGFTef5ybJA==',
-                    'client_id':'3MVG9d8..z.hDcPJSkmtzZgT7aQtJuvpVHUNppMya2lGXUK4luMFO9_CNWJPuM7sibYwr_MgHG6DolYTQ8Ig1',
-                    'client_secret':'1839144148342125021',
-                    'redirect_uri':'http://localhost:7080/sfcrm/index.php/callback'
+                    'client_id':'3MVG9CEn_O3jvv0wmF.cHMsIcXpMbgLInRvSPF_770aqc6E929sz2ReVWP4LniVpVtU1HtUTx.JufxQhSCiZn',
+                    'client_secret':'4309417190548860830',
+                    'redirect_uri':'https://validator.transdata.biz/callback'
                 },
                 
 

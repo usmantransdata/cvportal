@@ -514,8 +514,6 @@ class ClientController extends Controller
     public function assignCompany(Request $request){
         
             $input = $request->all();
-
-            print_r($input);dd();
             $this->validate($request,[
               'manager' => 'required'
                 ]); 

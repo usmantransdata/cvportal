@@ -114,7 +114,7 @@
 
                                                             <input id="consumerKey" type="hidden" class="form-control" value="{{$sales_force_data['consumerKey']}}" name="client_id" >
 
-                                                            <input id="consumerSecret" type="hidden" class="form-control" value="http://localhost:7080/sfcrm/index.php/callback" name="redirect_uri">
+                                                            <input id="consumerSecret" type="hidden" class="form-control" value="https://validator.transdata.biz/callback" name="redirect_uri">
                                                        
                                                      </div>
 
